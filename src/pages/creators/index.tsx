@@ -10,9 +10,10 @@ import * as C from 'components'
 
 type CreatorsProps = {
   preloadedCreators: Creator[]
+  date: string
 }
 
-export default function Creators({ preloadedCreators }: CreatorsProps) {
+export default function Creators({ preloadedCreators, date }: CreatorsProps) {
   const [creators, setCreators] = useState<Creator[]>(preloadedCreators)
 
   /*
@@ -49,6 +50,7 @@ export default function Creators({ preloadedCreators }: CreatorsProps) {
             tags={creator.tags}
           />
         ))}
+        <p>{date}</p>
       </S.Container>
     </>
   )
@@ -63,13 +65,15 @@ export const getStaticProps: GetStaticProps = async (): Promise<
     online: false,
     socials: []
   }))
-  const _15minutes = 15 * 60
-  console.log(preloadedCreators)
+  const _refreshInSeconds = 60
+  const date = new Date().toUTCString()
+
   return {
     props: {
-      preloadedCreators
+      preloadedCreators,
+      date
     },
-    revalidate: _15minutes
+    revalidate: _refreshInSeconds
   }
 }
 
