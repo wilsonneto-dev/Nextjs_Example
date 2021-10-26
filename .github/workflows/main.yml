@@ -11,7 +11,7 @@ jobs:
     name: Build and Upload to Azure Blob Storage
     runs-on: ubuntu-latest
     env:
-      container: "aznppocnextstoragelive"
+      container: "aznppocnextstoragelive2"
     
     steps:
     - name: getting the code
