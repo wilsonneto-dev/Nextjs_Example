@@ -35,12 +35,12 @@ const TopBar = () => {
           </S.BtnMenu>
 
           <S.Ul open={isOpenMenu}>
-            <S.Li activeLink={router.pathname === '/'}>
+            <S.Li activeLink={router?.pathname === '/'}>
               <Link href="/" passHref>
                 <S.ALink title="A Hub Tech">Home</S.ALink>
               </Link>
             </S.Li>
-            <S.Li activeLink={router.pathname === '/creators'}>
+            <S.Li activeLink={router?.pathname === '/creators'}>
               <Link href="/creators" passHref>
                 <S.ALink title="Conheça nossos creators">Creators</S.ALink>
               </Link>

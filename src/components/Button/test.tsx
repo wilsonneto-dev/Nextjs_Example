@@ -53,8 +53,7 @@ describe('<Button />', () => {
 
     const btn = screen.getByRole('button', { name: /Mais Informações/i })
     expect(btn).toHaveStyle({
-      fontSize: T.typography.sizes.p3,
-      padding: '1.2rem 2rem'
+      fontSize: T.typography.sizes.p3
     })
   })
 
@@ -63,8 +62,7 @@ describe('<Button />', () => {
 
     const btn = screen.getByRole('button', { name: /Mais Informações/i })
     expect(btn).toHaveStyle({
-      fontSize: T.typography.sizes.p1,
-      padding: '1.5rem 3rem'
+      fontSize: T.typography.sizes.p1
     })
   })
 
